@@ -1,11 +1,9 @@
 ; $Id$
-name = WYSIWYG MathML Formula upload
-description = MathML formula upload dialog for most WYSIWYG Editors
-dependencies[] = wysiwyg
+name = Collapse Document JQuery script
+description = Allow collapsing and expanding of an HTML page along the h2 headings
 dependencies[] = jquery_ui_dialog
-dependencies[] = drupalwiki_imageselect_element
 package = Drupal Wiki
 core = "6.x"
-project = "wysiwyg_mathjax"
+project = "collapsedocument"
 version = "6.x-0.5"
 

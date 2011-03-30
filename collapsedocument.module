@@ -1,0 +1,6 @@
+/**
+* @brief Implementation of hook_init()
+*/
+collapsedocument_init() {
+  drupal_add_js('collapsedocument.js');
+}
