@@ -1,6 +1,20 @@
+<?php
+
+/**
+ * Implementation of hook_help().
+ */
+function collapsedocument_help($path, $arg) {
+  switch ($path) {
+    case 'admin/help#collapsedocument':
+      $output = t('<p>JQuery script that automatically collapses document contents into sections under each h2.</p>');
+      return $output;
+  }
+}
+
 /**
 * @brief Implementation of hook_init()
 */
-collapsedocument_init() {
-  drupal_add_js('collapsedocument.js');
+function collapsedocument_init() {
+  rs_debug("calling drupal_add_js(".drupal_get_path('module', 'collapsedocument') . '/collapsedocument.js)');
+  drupal_add_js(drupal_get_path('module', 'collapsedocument') . '/collapsedocument.js');
 }
