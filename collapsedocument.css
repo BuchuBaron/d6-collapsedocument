@@ -1,0 +1,13 @@
+.expandable {
+  padding-left : 15px;
+  background : transparent url('images/menu-expanded') left 30% no-repeat;
+}
+.expandable:hover {
+  cursor:pointer;
+}
+.collapsed {
+  background : transparent url('images/menu-collapsed') left 30% no-repeat;
+}
+div.collapse {
+  margin-left: 15px;
+}

@@ -1,11 +1,11 @@
 Drupal.behaviors.collapsedocument = function(context) { 
-  $('div.content h2').after('<div class="collapsebegin"></div>');
-  $('div.content h2').slice(1).before('<div class="collapseend"></div>');
-  if ($('div.content h2').size()) {
-    $('div.content').append('<div class="collapseend"></div>');
-  }
-debugger;
-  $('div.content').val().replace('/collapsebegin"><\/div>/g', 'collapse">');
-  $('div.content').replace('/<div class="collapseend">/g', '');
+  $('div.content h2').addClass('expandable').after('<div class="collapse"></div>');
+  $('div.collapse').append($('div.collapse').nextUntil('h2'));
+  $('div.collapse').hide().prev('h2').toggleClass('collapsed');
+
+  $('div.content h2').click(function() {
+    $(this).next('.collapse').slideToggle(600);
+    $(this).toggleClass('collapsed');
+  });
 };
 
