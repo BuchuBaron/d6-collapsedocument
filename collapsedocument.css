@@ -5,7 +5,7 @@
 .expandable:hover {
   cursor:pointer;
 }
-.collapsed {
+h2.collapsed {
   background : transparent url('images/menu-collapsed') left 30% no-repeat;
 }
 div.collapse {
