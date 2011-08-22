@@ -10,4 +10,3 @@ Drupal.behaviors.collapsedocument = function(context) {
     $(this).toggleClass('collapsed');
   });
 };
-

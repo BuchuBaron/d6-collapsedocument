@@ -15,7 +15,7 @@ function collapsedocument_help($path, $arg) {
 * @brief Implementation of hook_init()
 */
 function collapsedocument_init() {
-  if (arg(0)!='admin') {
+  if (arg(0)!='admin' && arg(1)!='edit' && arg(2)!='edit') {
     drupal_add_js('document.write("<script src=\"http:\/\/ajax.googleapis.com\/ajax\/libs\/jquery\/1.4.4\/jquery.min.js\"><\/script>");', 'inline');
 //    drupal_add_js('var $jq = jQuery.noConflict();debugger;', 'inline');
     drupal_add_js(drupal_get_path('module', 'collapsedocument') . '/collapsedocument.js');
