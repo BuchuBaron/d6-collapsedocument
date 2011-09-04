@@ -3,7 +3,9 @@ Drupal.behaviors.collapsedocument = function(context) {
   if ($('div.content h2').last().html() != "Downloads") {
     $('table#attachments').before('<h2>Downloads</h2>');
   }
-  $('div.content h2').last().attr('Id', 'Downloads');
+  if ($('div.content h2').last().html() == "Downloads") {
+    $('div.content h2').last().attr('Id', 'Downloads');
+  }
   
   // Prepare H2 for collapse
   $('div.content h2').addClass('expandable').after('<div class="collapse"></div>');
