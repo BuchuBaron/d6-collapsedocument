@@ -17,6 +17,11 @@ Drupal.behaviors.collapsedocument = function(context) {
     $(this).append($(this).nextUntil('h2'));
     $(this).hide().prev('h2').toggleClass('collapsed');
   });
+  // If we have accidentally included the subscription form, or book navigation
+  // in the last collapsed section, hoik them back out
+  $('div.collapse').last().attr('Id', 'lastCollapse');
+  $('#lastCollapse #subscriptions-ui-node-form').appendTo($('#lastCollapse').parent());
+  $('#lastCollapse div.book-navigation').appendTo($('#lastCollapse').parent());
 
   $('div.content h2').click(function() {
     $(this).next('.collapse').slideToggle(600);
