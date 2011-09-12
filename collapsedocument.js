@@ -1,4 +1,18 @@
 Drupal.behaviors.collapsedocument = function(context) { 
+  // Add a 'collapse-all' and expand-all link to the top of the document
+  $('div.content h2').first().before('<a id="collapse-all">collapse all</a> <a id="expand-all">expand all</a>');
+  $('#expand-all').click(function() {
+    $('div.content h2.collapsed').each(function() {
+      $(this).click()
+    });
+  });
+  $('#collapse-all').click(function() {
+    $('div.content h2').each(function() {
+      if (!$(this).hasClass('collapsed')) {
+        $(this).click();
+      }
+    });
+  });
   // Put attachments into their own section
   if ($('div.content h2').last().html() != "Downloads") {
     $('table#attachments').before('<h2>Downloads</h2>');

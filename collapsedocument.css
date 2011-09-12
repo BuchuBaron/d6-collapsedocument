@@ -11,3 +11,8 @@ h2.collapsed {
 div.collapse {
   margin-left: 15px;
 }
+#collapse-all,
+#expand-all {
+  font-size: 60%;
+  cursor: pointer;
+}
