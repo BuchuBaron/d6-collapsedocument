@@ -15,7 +15,7 @@ Drupal.behaviors.collapsedocument = function(context) {
   });
   // Put attachments into their own section
   if ($('div.content h2').last().html() != "Downloads") {
-    $('table#attachments').before('<h2>Downloads</h2>');
+    $('div.table-wrapper table#attachments').parent().before('<h2>Downloads</h2>');
   }
   if ($('div.content h2').last().html() == "Downloads") {
     $('div.content h2').last().attr('Id', 'Downloads');
