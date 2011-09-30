@@ -11,8 +11,9 @@ h2.collapsed {
 div.collapse {
   margin-left: 15px;
 }
+.popup-element-title,
 #collapse-all,
 #expand-all {
-  font-size: 60%;
+  font-size: 80%;
   cursor: pointer;
 }

@@ -13,6 +13,11 @@ Drupal.behaviors.collapsedocument = function(context) {
       }
     });
   });
+  // Pull the citation popup block to be next to the expand-all link
+  $('div#popup-element-0').css({display:"inline"});
+  $('div.content h2').first().before($('div#popup-element-0'));
+  $('div#section1').remove();
+
   // Put attachments into their own section
   if ($('div.content h2').last().html() != "Downloads") {
     $('div.table-wrapper table#attachments').parent().before('<h2>Downloads</h2>');
