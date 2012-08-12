@@ -1,12 +1,12 @@
 .expandable {
   padding-left : 15px;
-  background : transparent url('images/menu-expanded') left 30% no-repeat;
+  background : transparent url('images/menu-expanded.png') left 30% no-repeat;
 }
 .expandable:hover {
   cursor:pointer;
 }
 h2.collapsed {
-  background : transparent url('images/menu-collapsed') left 30% no-repeat;
+  background : transparent url('images/menu-collapsed.png') left 30% no-repeat;
 }
 div.collapse {
   margin-left: 15px;
